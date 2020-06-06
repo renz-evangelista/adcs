@@ -25,7 +25,7 @@ xlabel('time (s) ');
 ylabel('rad/s'); 
 title('Reaction Wheels Speed (LQR Controller)');
 
-total_power_lqr = sum(power);
+max_power_lqr = max(power);
 %% clc; clear all; close all
 % LQR
 sim('smc');   
@@ -53,7 +53,7 @@ xlabel('time (s) ');
 ylabel('rad/s'); 
 title('Reaction Wheels Speed (Sliding Mode Controller)');
 
-total_power_smc = sum(power);
+max_power_smc = max(power);
 %% clc; clear all; close all
 % LQR
 sim('backstepping');   
@@ -81,4 +81,4 @@ xlabel('time (s) ');
 ylabel('rad/s'); 
 title('Reaction Wheels Speed (Integrator Backstepping Controller)');
 
-total_power_backstepping = sum(power);
+max_power_backstepping = max(power);
